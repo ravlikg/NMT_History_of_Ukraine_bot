@@ -30,7 +30,7 @@ with open("dates.json", "r", encoding="utf-8") as f:
 async def ask_question(message: Message, state: FSMContext):
     question = random.choice(dates)
 
-    allowed_themes = ["Давня доба", "Київська Русь", "Галицько-Волинська держава"]
+    allowed_themes = ["Давня доба", "Київська Русь", "Галицько-Волинська держава", "Литовсько-польська доба"]
     while not question["category"] in allowed_themes:
         question = random.choice(dates)
 
